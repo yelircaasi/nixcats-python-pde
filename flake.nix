@@ -186,7 +186,7 @@
           };
         };
       packageDefinitions = {
-        nvim =
+        pde =
           { pkgs, ... }:
           {
             settings = {
@@ -212,7 +212,7 @@
             };
           };
       };
-      defaultPackageName = "nvim";
+      defaultPackageName = "pde";
     in
     forEachSystem (
       system:
