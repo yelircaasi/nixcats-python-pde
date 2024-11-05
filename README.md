@@ -57,3 +57,47 @@ were chosen instead.
 
 Feel free to copy any code from here or use it as an example. It's [public
 domain](./LICENSE).
+
+## Roadmap
+
+- [ ] Watch on basic setup / LSP
+      - [ ] [My NeoVim Setup](https://www.youtube.com/watch?v=ZqPpBfiX9ws&pp=ygUWcHl0aG9uIHNldHVwIGluIG5lb3ZpbQ%3D%3D)
+      - [ ] [Understanding Neovim Playlist](https://www.youtube.com/playlist?list=PLx2ksyallYzW4WNYHD9xOFrPRYGlntAft)
+      - [ ] [Understanding Neovim #7 - Language Server Protocol](https://www.youtube.com/watch?v=HL7b63Hrc8U)
+      - [ ] [Make Neovim BETTER than VSCode - LSP tutorial](https://www.youtube.com/watch?v=lpQMeFph1RE)
+      - [ ] [Neovim for Newbs. FREE NEOVIM COURSE](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
+      - [ ] [How to setup Neovim from Scratch - Complete Guide (Including TMUX, Lazy and LSP)](https://www.youtube.com/watch?v=ZjMzBd1Dqz8)
+      - [ ] [Awesome Neovim Setup From Scratch - Full Guide](https://www.youtube.com/watch?v=JWReY93Vl6g)
+      - [ ] [How I Setup LSP In Neovim For An Amazing Dev Experience - Full Guide](https://www.youtube.com/watch?v=NL8D8EkphUw)
+      - [ ] [Basic Neovim LSP Setup (with Treesitter and Completion)](https://www.youtube.com/watch?v=Ku-m7eEbWas)
+      - [ ] [Neovim - LSP Setup Tutorial (Built in LSP 100% Lua)](https://www.youtube.com/watch?v=6F3ONwrCxMg)
+      - [ ] [quick.nvim | A fast, modern and reliable Neovim configuration](https://www.youtube.com/watch?v=OhbgZbORFd4)
+      - [ ] [Full Neovim Setup from Scratch in 2024](https://www.youtube.com/watch?v=KYDG3AHgYEs&t=58s&pp=ygUNbmVvdmltIHB5dGhvbg%3D%3D)
+      - [ ] [My Entire Neovim Setup From Scratch After 8 Years](https://www.youtube.com/watch?v=x__SZUuLOxw&pp=ygUlVGhlIHVsdGltYXRlIE5lb3ZpbSBzZXR1cCBmb3IgUHl0aG9uIQ%3D%3D)
+      - [ ] [How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide](https://www.youtube.com/watch?v=6pAG3BHurdM&pp=ygUlVGhlIHVsdGltYXRlIE5lb3ZpbSBzZXR1cCBmb3IgUHl0aG9uIQ%3D%3D)
+      - [ ] [Ultimate Neovim Config | 2024 | Launch.nvim](https://www.youtube.com/watch?v=KGJV0n70Mxs&pp=ygUlVGhlIHVsdGltYXRlIE5lb3ZpbSBzZXR1cCBmb3IgUHl0aG9uIQ%3D%3D)
+      - [ ] [Neovim Configuration](https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
+      - [ ] [Neovim from Scratch (chris@machine)](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
+- [ ] Watch on debugging
+      - [ ] [Debugging Code in Neovim (Rust, Go, Python etc)](https://www.youtube.com/watch?v=djpMB9LPkBc&pp=ygUQbmVvdmltIGRlYnVnZ2luZw%3D%3D)
+      - [ ] [Debugging In Neovim (ft BashBunni)](https://www.youtube.com/watch?v=0moS8UHupGc&pp=ygUQbmVvdmltIGRlYnVnZ2luZw%3D%3D)
+      - [ ] [How to ACTUALLY switch from VS Code to Neovim](https://www.youtube.com/watch?v=BQa16JNRkpY&pp=ygUQbmVvdmltIGRlYnVnZ2luZw%3D%3D)
+      - [ ] [[Neovim] Debugging with NVIM-DAP](https://www.youtube.com/watch?v=lEMZnrC-ST4)
+      - [ ] [simple neovim debugging setup (in 10 minutes)](https://www.youtube.com/watch?v=lyNfnI-B640)
+      - [ ] [Neovim + nvim-dap-python + Debugpy + PDM](https://www.youtube.com/watch?v=wwxL98-UiI0&pp=ygUQbmVvdmltIGRlYnVnZ2luZw%3D%3D)
+      - [ ] [Neovim Plugin: nvim-dap](https://www.youtube.com/watch?v=ga3Cas7vNCk&pp=ygUQbmVvdmltIGRlYnVnZ2luZw%3D%3D)
+- [ ] Watch on Python-specific
+      - [ ] [The perfect Neovim setup for Python](https://www.youtube.com/watch?v=4BnVeOUeZxc&t=590s&pp=ygUQbmVvdmltIGRlYnVnZ2luZw%3D%3D)
+      - [ ] [Neovim Starter Kit for Python](https://www.youtube.com/results?search_query=neovim+python)
+      - [ ] [Run Python code on Neovim with Compiler.nvim](https://www.youtube.com/watch?v=4WJOY2xgYgs&pp=ygUNbmVvdmltIHB5dGhvbg%3D%3D)
+      - [ ] [The ultimate Neovim setup for Python!](https://www.youtube.com/watch?v=4yqALty1tcQ&pp=ygUlVGhlIHVsdGltYXRlIE5lb3ZpbSBzZXR1cCBmb3IgUHl0aG9uIQ%3D%3D)
+      - [ ] [Neovim Lazy Lua IDE - my simple but powerful setup for 2024](https://www.youtube.com/watch?v=VljhZ0e9zGE&t=1235s)
+- [ ] Watch on completion
+      - [ ] [I replaced my nvim-cmp with blink.cmp](https://www.youtube.com/watch?v=6JpLA1WfP2s&pp=ygUQbmVvdmltIGJsaW5rLmNtcA%3D%3D)
+- [ ] Watch
+
+## Plugins Shortlist
+
+- dashboard.nvim
+- --> [m1chaelwilliams](https://github.com/m1chaelwilliams/my-nvim-config/tree/main/lua/plugins)
+- 

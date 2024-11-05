@@ -2,22 +2,32 @@
   description = "A Neovim configuration for the stubborn Nixian hacker";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
+    nixpkgs.url = "github:nixos/nixpkgs/f7542cb59c3215123304811023035d4470751b2f";
+    nixCats.url = "github:BirdeeHub/nixCats-nvim/6ea180744a6e95b591b0d8e0caa9e99ef6c81a0b";
 
     blink-cmp = {
-      url = "github:Saghen/blink.cmp";
+      url = "github:Saghen/blink.cmp/1628800e1747ecc767368cab45916177c723da82";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     plugins-typst-preview = {
-      url = "github:chomosuke/typst-preview.nvim";
+      url = "github:chomosuke/typst-preview.nvim/06778d1b3d4d29c34f1faf80947b586f403689ba";
       flake = false;
     };
 
     plugins-lsp-progress = {
-      url = "github:linrongbin16/lsp-progress.nvim";
+      url = "github:linrongbin16/lsp-progress.nvim/d5f4d28efe75ce636bfbe271eb45f39689765aab";
       flake = false;
+    };
+
+    plugins-xit-nvim = {
+      url = "github:synaptiko/xit.nvim/8f724f76c595f02a5bed2904ae556f60c62510f6";
+      flake = false;
+    };
+
+    nix-treesitter = {
+      url = "github:ratson/nix-treesitter/4b8e8ddd71b0aee38976116adf178760905f57e5";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs =
@@ -59,6 +69,7 @@
       # see :help nixCats.flake.outputs.categories
       # and
       # :help nixCats.flake.outputs.categoryDefinitions.scheme
+      
       categoryDefinitions =
         {
           pkgs,
@@ -96,7 +107,7 @@
 
           # install lz.n and treesitter grammars
           startupPlugins = {
-            gitPlugins = with pkgs.neovimPlugins; [ ];
+            gitPlugins = with pkgs.neovimPlugins; [ xit-nvim ];
             general = with pkgs.vimPlugins; [
               lz-n
               (nvim-treesitter.withPlugins (
@@ -123,6 +134,7 @@
                   bash
                   make
                   gitcommit
+                  inputs.nix-treesitter.packages.${pkgs.system}.tree-sitter-xit
                 ])
               ))
             ];
@@ -227,6 +239,7 @@
         } categoryDefinitions packageDefinitions;
         defaultPackage = nixCatsBuilder defaultPackageName;
         pkgs = import nixpkgs { inherit system; };
+        
       in
       {
         packages = utils.mkAllWithDefault defaultPackage;

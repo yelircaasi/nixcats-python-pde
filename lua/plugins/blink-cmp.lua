@@ -5,21 +5,22 @@ return {
     require("blink-cmp").setup({
       -- for keymap, all values may be string | string[]
       -- use an empty table to disable a keymap
-      keymap = {
-        show = "<C-space>",
-        hide = "<C-e>",
-        accept = "<Tab>",
-        select_prev = { "<Up>", "<C-p>" },
-        select_next = { "<Down>", "<C-n>" },
+      keymap = 'default', --TODO
+      -- {
+      --   show = "<C-space>",
+      --   hide = "<C-e>",
+      --   accept = "<Tab>",
+      --   select_prev = { "<Up>", "<C-p>" },
+      --   select_next = { "<Down>", "<C-n>" },
 
-        show_documentation = {},
-        hide_documentation = {},
-        scroll_documentation_up = "<C-b>",
-        scroll_documentation_down = "<C-f>",
+      --   show_documentation = {},
+      --   hide_documentation = {},
+      --   scroll_documentation_up = "<C-b>",
+      --   scroll_documentation_down = "<C-f>",
 
-        snippet_forward = "<Tab>",
-        snippet_backward = "<S-Tab>",
-      },
+      --   snippet_forward = "<Tab>",
+      --   snippet_backward = "<S-Tab>",
+      -- },
 
       fuzzy = {
         -- frencency tracks the most recently/frequently used items and boosts the score of the item
