@@ -95,3 +95,62 @@ vim.api.nvim_create_autocmd('FileType', {
     })
   end,
 })
+
+
+-- lua end concealing
+-- -- Define a function to place virtual text markers
+-- local function mark_lua_ends()
+--   -- Clear all previous virtual text in the current buffer
+--   local ns = vim.api.nvim_create_namespace("EndMarker")
+--   vim.api.nvim_buf_clear_namespace(0, ns, 0, -1)
+
+--   -- Get the lines in the current buffer
+--   local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+--   for i, line in ipairs(lines) do
+--     -- Look for 'end' keywords not under the cursor
+--     local s, e = line:find("%f[%a]end%f[%A]") -- Word-boundary match for 'end'
+--     if s and i - 1 ~= vim.fn.line('.') - 1 then
+--       -- Add virtual text at the end keyword
+--       vim.api.nvim_buf_set_extmark(0, ns, i - 1, e, {
+--         virt_text = { { "❯", "NonText" } }, -- Customize 'NonText' as needed
+--         virt_text_pos = "overlay",
+--       })
+--     end
+--   end
+-- end
+
+-- -- Create an autocommand to update markers on buffer changes and cursor movement
+-- vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "CursorMoved" }, {
+--   pattern = "*.lua",
+--   callback = function()
+--     mark_lua_ends()
+--   end,
+-- })
+
+-- replace 'end' with '›' using virtual text, to reduce visual noise
+local function replace_lua_ends()
+  local ns = vim.api.nvim_create_namespace("EndReplacer")
+  vim.api.nvim_buf_clear_namespace(0, ns, 0, -1)
+
+  local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+  local cursor_line = vim.fn.line('.') - 1
+  local cursor_col = vim.fn.col('.') - 1
+
+  for i, line in ipairs(lines) do
+    local s, e = line:find("^%s*%f[%a](end)%f[%A]")
+    if s and not (i - 1 == cursor_line and cursor_col >= e - 1 and cursor_col < e) then
+      vim.api.nvim_buf_set_extmark(0, ns, i - 1, e - 3, {
+        virt_text = { { "›  ", "Keyword" } }, -- alt: ⦆⦄❩⸩〛⦆⦄）〕⦘〙〉》〉❯」」』» ›)
+        virt_text_pos = "overlay",
+        hl_mode = "replace",
+      })
+    end
+  end
+end
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "CursorMoved" }, {
+  pattern = "*.lua",
+  callback = function()
+    replace_lua_ends()
+  end,
+})
